@@ -1,0 +1,19 @@
+//
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    block content
+
+    textarea(rows='4', cols='50')
+      | New text box.
+      
+   form(action='/foo/bar', method='post')
+      input(type='text', name='level')
+      input(type='text', name='emotion')
+      input(type='submit')
+
+
+
