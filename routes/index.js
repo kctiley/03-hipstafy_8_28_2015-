@@ -28,8 +28,6 @@ router.post('/foo/bar', function (req, res, next) {
     };
     return result.join();
   }; 
-  //res.send(sentToArr[0] + ipsumArr[randomIpsumIndex])
-  
   res.send(convert())
 })
 
