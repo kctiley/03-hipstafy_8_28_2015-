@@ -28,9 +28,9 @@ router.post('/foo/bar', function (req, res, next) {
   var result = [];
   var convert = function(){
     for (var i = 0; i < sentToArr.length; i++){
-      result.push(sentToArr[i] + ' ' + ipsumArr[Math.floor(Math.random() * 17)])
+      result.push(sentToArr[i] + ' ' + ipsumArr[Math.floor(Math.random() * 17)] + "<br>")
     };
-    return result.join();
+    return result.join(' ');
   }; 
   res.send(convert())
 })
