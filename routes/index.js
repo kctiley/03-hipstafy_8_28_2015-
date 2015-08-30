@@ -9,22 +9,26 @@ router.get('/', function(req, res, next) {
 });
 
 //Generates random index of ipsum array in snippets.js
+// var randomIpsumIndex = Math.floor(Math.random() * 17);
+// router.post('/foo/bar', function (req, res, next) { 
+//   var sentToArr = req.body.sentence.split(' ');
+//   var result = [];
+//   var convert = function(){
+//     for (var i = 0; i < sentToArr.length; i++){
+//       result.push(sentToArr[i] + ' ' + ipsumArr[randomIpsumIndex])
+//     };
+//     return result.join();
+//   }; 
+//   res.send(convert())
+// })
 
 var randomIpsumIndex = Math.floor(Math.random() * 17);
-
-// var result = [];
-// var convert = function(){
-//   or (var i = 0; i < sentToArr.length; i++){
-//       result.push(sentToArr[i] + ipsumArr[randomIpsumIndex])
-//     }
-//     return result.join();
-// }
 router.post('/foo/bar', function (req, res, next) { 
   var sentToArr = req.body.sentence.split(' ');
   var result = [];
   var convert = function(){
     for (var i = 0; i < sentToArr.length; i++){
-      result.push(sentToArr[i] + ' ' + ipsumArr[randomIpsumIndex])
+      result.push(sentToArr[i] + ' ' + ipsumArr[Math.floor(Math.random() * 17)])
     };
     return result.join();
   }; 
